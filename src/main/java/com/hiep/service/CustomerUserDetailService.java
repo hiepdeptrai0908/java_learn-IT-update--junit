@@ -32,7 +32,6 @@ public class CustomerUserDetailService implements UserDetailsService{
 		userModel.setEmail(email);
 		
 		List<AppUserEntity> listUser = userMapper.selectByEmail(userModel);
-		log.info("listUser:{}",listUser);
 		if(listUser.size() > 0) {
 			AppUserEntity userEntity = listUser.get(0);
 			

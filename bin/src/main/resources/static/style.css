@@ -70,10 +70,6 @@ h1 {
     color: rgb(141, 46, 144);
 }
 
-.content-item-input-area{
-	height:60px;
-}
-
 .create-btn:hover, .btn-search:hover {
     opacity: 0.8;
 }

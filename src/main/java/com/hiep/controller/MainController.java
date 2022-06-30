@@ -33,27 +33,27 @@ public class MainController {
 	}
 
 	// Login ページ
-	@GetMapping("login")
+	@GetMapping("/login")
 	public String login() {
 		
 		return "login";
 	}
 
 	// ログインの失敗の場合
-	@GetMapping("login-fail")
+	@GetMapping("/login-fail")
 	public String loginFail(Model model) {
 		model.addAttribute("errorMessengeLogin", "メールアドレスまたはパスワードが正しくありません！");
 		return "login";
 	}
 
 	// 新規ユーザーの作成のページを表示する
-	@GetMapping("create-user")
+	@GetMapping("/create-user")
 	private String createUser(@ModelAttribute UserModel userModel) {
 		return "create-user";
 	}
 
 	// 新規ユーザーの作成を処理する
-	@PostMapping("do-create-user")
+	@PostMapping("/do-create-user")
 	private String doCreateUser(UserModel userModel, ErMessage erMessage) {
 
 		String getEmail = userModel.getEmail();
